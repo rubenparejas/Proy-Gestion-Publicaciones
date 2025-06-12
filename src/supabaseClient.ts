@@ -7,14 +7,12 @@
 
 // src/supabaseClient.ts
 import { createClient } from "@supabase/supabase-js";
-import { Database } from "./types/supabase"; // si tienes tipos generados, si no, puedes omitir esto
+// Si usas tipos generados por Supabase CLI:
+import { Database } from "./types/supabase"; // O elimina esta línea si no tienes tipos
 
-// ✅ Usa variables de entorno (más seguro para producción)
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL!;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY!;
 
-// ✅ Crea el cliente de Supabase
 export const supabase = createClient<Database>(supabaseUrl, supabaseKey);
-
-// Si no tienes tipos generados con Supabase CLI, simplemente haz:
-/// export const supabase = createClient(supabaseUrl, supabaseKey);
+// Si no tienes tipos generados, haz esto en su lugar:
+// export const supabase = createClient(supabaseUrl, supabaseKey);
