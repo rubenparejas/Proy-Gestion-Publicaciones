@@ -7,12 +7,9 @@
 
 // src/supabaseClient.ts
 import { createClient } from "@supabase/supabase-js";
-// Si usas tipos generados por Supabase CLI:
-import { Database } from "./types/supabase"; // O elimina esta línea si no tienes tipos
+import { Database } from "./types/supabase"; // Asegúrate de tener este archivo
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL!;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY!;
 
 export const supabase = createClient<Database>(supabaseUrl, supabaseKey);
-// Si no tienes tipos generados, haz esto en su lugar:
-// export const supabase = createClient(supabaseUrl, supabaseKey);
