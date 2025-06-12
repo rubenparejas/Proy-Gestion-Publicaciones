@@ -54,7 +54,7 @@ const App: React.FC = () => {
       const [email, setEmail] = useState("");
       const [password, setPassword] = useState("");
       const [name, setName] = useState(""); // Solo para sign up
-      const [loading, setLoading] = useState(false);
+      //const [loading, setLoading] = useState(false);
       const [error, setError] = useState<string | null>(null);
       const [successMsg, setSuccessMsg] = useState<string | null>(null);
     
