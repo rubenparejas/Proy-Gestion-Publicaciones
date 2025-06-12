@@ -22,7 +22,7 @@ const App: React.FC = () => {
   const [users, setUsers] = useState<any[]>([]);
   const [articles, setArticles] = useState<any[]>([]);
   const [conferences, setConferences] = useState<any[]>([]);
-  //const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // --------------------------
   //   Cargar datos globales
